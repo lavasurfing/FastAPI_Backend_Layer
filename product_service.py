@@ -20,6 +20,7 @@ from microservices.components.sample_data import product_data
 
 app = FastAPI()
 
+
 # Origin for CORS
 origins = [
     "http://localhost:5173",  # Allow requests from your frontend origin
@@ -34,6 +35,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Base model data type for product 
 class Product(BaseModel):
