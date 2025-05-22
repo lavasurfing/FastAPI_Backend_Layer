@@ -6,6 +6,12 @@ import uvicorn
 
 import asyncio
 
+# Middleware for CORS
+from fastapi.middleware.cors import CORSMiddleware
+
+
+
+
 # importing dataset
 from microservices.components.sample_data import product_data
 
@@ -13,6 +19,21 @@ from microservices.components.sample_data import product_data
 
 
 app = FastAPI()
+
+# Origin for CORS
+origins = [
+    "http://localhost:5173",  # Allow requests from your frontend origin
+]
+
+# Middleware for CORS
+# This allows your frontend to make requests to the FastAPI backend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Base model data type for product 
 class Product(BaseModel):
