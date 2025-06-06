@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 fastapi
 uvicorn
 pydantic
-=======
 fastapi
 pydantic
 uvicorn
->>>>>>> a8628d2bc758a348cc8180cb5858fa888c203e4a
+
