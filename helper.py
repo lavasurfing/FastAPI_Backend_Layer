@@ -8,6 +8,6 @@ def get_image_list(folder_path):
         return []
 
 
-img_dir = r"microservices\components\images"
-files = get_image_list(img_dir)
-print(files[0].split('-')[1].split('.')[0])
+# img_dir = r"microservices\components\images"
+# files = get_image_list(img_dir)
+# print(files[0].split('-')[1].split('.')[0])
